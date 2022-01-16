@@ -1,0 +1,241 @@
+PerspectiveCamera {
+    center 0.7 0.9 0.9
+    direction -0.5 -0.4 -0.5
+    up 0 1 0
+    angle 25
+    width 1000
+    height 1000
+    isDOF 1
+    lenRadius 0.001
+    lenSampleNum 50
+    focusDist 1.11
+}
+
+Lights {
+    numLights 1
+    AreaLight {
+      position 0 1.2 0
+      dirX 1 0 0
+      dirY 0 0 -1
+      color 50 50 50
+    }
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 3
+    Material { 
+      mColor 0 0.749 1
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 0.7
+      shininess 10
+      reflidx 0.3
+      refridx 0
+      refrN 1
+      textcoff 1
+    }
+    Material { 
+      mColor 0.222 0.184 0.135
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 100
+      texture material/wb.ppm
+    }
+    Material { 
+      mColor 0.5 0.5 0.5
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 1
+    }
+}
+
+Group {
+    numObjects 4
+    MaterialIndex 0
+    TriangleMesh {
+        scale 1
+        obj_file mesh/bunny_200.obj
+    }
+    MaterialIndex 1
+    Plane {
+	normal 0 1 0
+        offset -10
+    }
+    Plane {
+	normal 1 0 0
+        offset -10
+    }
+    Plane {
+	normal 0 0 1
+        offset -10
+    }
+}
+
+PerspectiveCamera {
+    center 5 5 5
+    direction -2 -2 -2
+    up -1 2 -1
+    angle 30
+    width 1000
+    height 1000
+    isDOF 0
+}
+
+Lights {
+    numLights 1
+    PointLight {
+      position 0 0 -4
+      color 100 100 100
+    }
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 3
+    Material { 
+      mColor 0 0.749 1
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 0.1
+      shininess 10
+      reflidx 0.1
+      refridx 0.8
+      refrN 1
+      textcoff 1
+    }
+    Material { 
+      mColor 0.222 0.184 0.135
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 100
+      texture material/woodfloor.ppm
+    }
+    Material { 
+      mColor 0.5 0.5 0.5
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 1
+    }
+}
+
+Group {
+    numObjects 2
+    MaterialIndex 0
+    Sphere {
+	    center 0 0 0
+        radius 1 
+    }
+    MaterialIndex 1
+    Plane {
+	normal 0 1 0
+        offset -1
+    }
+}
+
+// Standard
+
+PerspectiveCamera {
+    center 150 200 150
+    direction -1 -0.5 -1
+    up -0.5 2 -0.5
+    angle 50
+    width 1000
+    height 1000
+    isDOF 0
+}
+
+Lights {
+    numLights 1
+    RecLight {
+      position -150 200 -150
+      direction 0 -1 0
+      up 1 0 0 
+      dx 1000
+      dy 1000
+      color 200 200 200
+    }
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 3
+    Material { 
+      mColor 0 0.749 1
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 0.4
+      shininess 20
+      reflidx 0
+      refridx 0.6
+      refrN 1
+      textcoff 1
+    }
+    Material { 
+      mColor 0.222 0.184 0.135
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 100
+      texture material/Wood026_2K_Color.ppm
+    }
+    Material { 
+      mColor 0.5 0.5 0.5
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 1
+    }
+}
+
+Group {
+    numObjects 2
+    MaterialIndex 0
+    TriangleMesh {
+        scale 1
+        obj_file mesh/obj.obj
+    }
+    MaterialIndex 1
+    Plane {
+	      normal 0 1 0
+        offset -0.6
+    }
+}
+

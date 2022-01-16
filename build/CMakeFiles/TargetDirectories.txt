@@ -1,0 +1,6 @@
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/CMakeFiles/rebuild_cache.dir
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/CMakeFiles/PA1.dir
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/CMakeFiles/edit_cache.dir
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/deps/vecmath/CMakeFiles/vecmath.dir
+/home/si_jiang/document/2021Fall-ComputerGraphics/FinalProject/build/deps/vecmath/CMakeFiles/edit_cache.dir

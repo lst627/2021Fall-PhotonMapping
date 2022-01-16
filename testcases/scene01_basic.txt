@@ -1,0 +1,88 @@
+PerspectiveCamera {
+    center 1.4 2.0 1.4
+    direction -1 -0.5 -1
+    up -0.5 2 -0.5
+    angle 60
+    width 100
+    height 100
+    isDOF 0
+}
+
+Lights {
+    numLights 1
+    RecLight {
+      position -1.5 5.0 -1.5
+      direction -0.3 -1 -0.3
+      up 1 0 -1 
+      dx 10
+      dy 10
+      color 20 20 20
+    }
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 2
+    Material { 
+      mColor 0 0.749 1
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 0.7
+      shininess 20
+      reflidx 0
+      refridx 0.3
+      refrN 1
+      textcoff 1
+    }
+    Material { 
+      mColor 0.222 0.184 0.135
+      textDir 1.2 2.3 3.4
+      absorb 0 0 0
+      diffidx 1
+      shininess 10
+      reflidx 0
+      refridx 0
+      refrN 0
+      textcoff 100
+      texture material/Wood026_2K_Color.ppm
+    }
+}
+
+Group {
+    numObjects 6
+    MaterialIndex 0
+    TriangleMesh {
+        scale 100
+        obj_file mesh/obj.obj
+    }
+    Transform {
+	    	Translate  -0.3 1 -0.4 	
+        TriangleMesh {
+            scale 1
+            obj_file mesh/bunny_1k.obj
+        }
+    }
+    Transform {
+	    	Translate  -0.3 1 -1 	
+        TriangleMesh {
+            scale 50
+            obj_file mesh/Wine_bottle.obj
+        }
+    }
+    MaterialIndex 1
+    Plane {
+	      normal 0 1 0
+        offset -0.006
+    }
+    Plane {
+	      normal 1 0 0
+        offset -2.7
+    }
+    Plane {
+	      normal 0 0 1
+        offset -3.2
+    }
+}
